@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043C6AFB22D4D55B0094B46E /* SHMineDingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C6AFA22D4D55B0094B46E /* SHMineDingController.swift */; };
+		043C6AFD22D62D690094B46E /* SHdingDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C6AFC22D62D690094B46E /* SHdingDetailController.swift */; };
 		04D1902F22C3BDAD00F212D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D1902E22C3BDAD00F212D2 /* AppDelegate.swift */; };
 		04D1903122C3BDAD00F212D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D1903022C3BDAD00F212D2 /* ViewController.swift */; };
 		04D1903622C3BDAF00F212D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D1903522C3BDAF00F212D2 /* Assets.xcassets */; };
@@ -77,6 +79,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		043C6AFA22D4D55B0094B46E /* SHMineDingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHMineDingController.swift; sourceTree = "<group>"; };
+		043C6AFC22D62D690094B46E /* SHdingDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHdingDetailController.swift; sourceTree = "<group>"; };
 		04D1902B22C3BDAD00F212D2 /* dingdingxiuSHB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dingdingxiuSHB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D1902E22C3BDAD00F212D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04D1903022C3BDAD00F212D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -423,7 +427,9 @@
 				04D190C822D0FEEE00F212D2 /* SHModelViewController.swift */,
 				04D190CA22D105EF00F212D2 /* SHMineViewController.swift */,
 				04D190CC22D1069A00F212D2 /* SHDingDanController.swift */,
+				043C6AFA22D4D55B0094B46E /* SHMineDingController.swift */,
 				04D190D022D378D200F212D2 /* SHListController.swift */,
+				043C6AFC22D62D690094B46E /* SHdingDetailController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -635,6 +641,7 @@
 				04D190D122D378D200F212D2 /* SHListController.swift in Sources */,
 				04D190BF22D0EC7C00F212D2 /* SHMineTabCell.swift in Sources */,
 				04D190C122D0ECCF00F212D2 /* SHDingdanCell.swift in Sources */,
+				043C6AFD22D62D690094B46E /* SHdingDetailController.swift in Sources */,
 				04D1908D22C3C4FF00F212D2 /* UCollectionViewAlignedLayout.swift in Sources */,
 				04D190C322D0ED5F00F212D2 /* SHAlertView.swift in Sources */,
 				04D1909022C3C4FF00F212D2 /* UEmptyDataSet.swift in Sources */,
@@ -648,6 +655,7 @@
 				04D1908422C3C4FF00F212D2 /* ArrayExtensions.swift in Sources */,
 				04D1908E22C3C4FF00F212D2 /* UCollectionViewSectionBackgroundLayout.swift in Sources */,
 				04D1908C22C3C4FF00F212D2 /* DictionaryExtension.swift in Sources */,
+				043C6AFB22D4D55B0094B46E /* SHMineDingController.swift in Sources */,
 				04D190C922D0FEEE00F212D2 /* SHModelViewController.swift in Sources */,
 				04D1908A22C3C4FF00F212D2 /* DispatchQueueExtension.swift in Sources */,
 				04D1908322C3C4FF00F212D2 /* CommonHelper.swift in Sources */,

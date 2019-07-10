@@ -24,10 +24,17 @@ class SHDingDanController: SHBaseController {
         super.viewDidLoad()
         view.addSubview(tableView)
         
+        if #available(iOS 11.0, *){
+            tableView.contentInsetAdjustmentBehavior = .never
+        } else
+        {
+            automaticallyAdjustsScrollViewInsets = false
+        }
         tableView.snp.makeConstraints{ $0.edges.equalTo(self.view.usnp.edges) }
         
     }
 }
+
 extension SHDingDanController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1

@@ -24,7 +24,7 @@ class SHTabBarController: UITabBarController {
         
         
         /// 书架
-        let bookVC = SHomeViewController()
+        let bookVC = SHMineDingController()
         addChildViewController(bookVC,
                                title: "任务",
                                image: UIImage(named: "tabbar_nor_2"),
