@@ -10,9 +10,10 @@ import UIKit
 
 class SHModelViewController: SHBaseController {
 
+    var type:NSString?
     
     var indexPath : NSInteger?
-    var daTaSubList:[String] = UserDefaults.standard.object(forKey: "daTaSubList") as! [String]
+    var daTaSubList:[String] = []
     
     lazy var resignNiketext:UITextField = {
         
@@ -31,8 +32,21 @@ class SHModelViewController: SHBaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "修改资料"
+        if type == "任务中" {
+            title = "输入订单详情"
+            daTaSubList  = UserDefaults.standard.object(forKey: "mydingdanging") as! [String]
+
+
+        } else
+        {
+            title = "修改资料"
+
+            daTaSubList = UserDefaults.standard.object(forKey: "daTaSubList") as! [String]
+
+        }
         
+        resignNiketext.text = daTaSubList[indexPath ?? 0]
+
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "确定", titleColor: UIColor.gray, titleFont: UIFont.systemFont(ofSize: 13), titleEdgeInsets: UIEdgeInsets.zero, target: self, action: #selector(rightBtnClick))
         
         
@@ -41,7 +55,6 @@ class SHModelViewController: SHBaseController {
     override func configUI() {
         view.addSubview(resignNiketext)
         
-        resignNiketext.text = daTaSubList[indexPath ?? 0]
         resignNiketext.snp.makeConstraints {
             $0.top.equalToSuperview().offset(80)
             $0.height.equalTo(44)
@@ -71,8 +84,15 @@ class SHModelViewController: SHBaseController {
         daTaSubList[indexPath ?? 0] = resignNiketext.text ?? "";
         
         let userdefaults = UserDefaults.standard
-        
-        userdefaults.set(daTaSubList, forKey: "daTaSubList")
+        if type == "任务中" {
+            userdefaults.set(daTaSubList, forKey: "mydingdanging")
+
+        } else
+        {
+            
+            userdefaults.set(daTaSubList, forKey: "daTaSubList")
+
+        }
         
         userdefaults.synchronize()
         navigationController?.popViewController(animated: true)

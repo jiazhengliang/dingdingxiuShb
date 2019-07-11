@@ -10,6 +10,7 @@ import UIKit
 
 class SHMineDingController: SHBaseController {
 
+    var type = "任务中"
 
     
     lazy var tableView : UITableView  = {
@@ -33,7 +34,7 @@ class SHMineDingController: SHBaseController {
     
     lazy var  rightBtn :UIButton = {
         let t1 = UIButton()
-        t1.setTitle("立即抢单", for: .normal)
+        t1.setTitle("已完成", for: .normal)
         t1.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         t1.setTitleColor(UIColor.gray, for: .normal)
         t1.setTitleColor(UIColor(r: 245, g: 38, b: 88, a: 1), for: .selected)
@@ -42,9 +43,25 @@ class SHMineDingController: SHBaseController {
         return t1
     }()
     
+    
+    var mydingdangDone = ["黄贵生 13756533323","洗衣机","不能脱水","2019-6-12","等待上门处理","已支付","深圳市宝安西乡街华富新村4巷","30元","230元","更换马达","260元",]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableView)
+        let userdefaults = UserDefaults.standard
+
+        var mydingdanging  =  userdefaults.object(forKey: "mydingdanging")
+        
+        if mydingdanging == nil {
+            
+            mydingdanging = ["李林哲 13756589954","电脑","黑屏卡机","2019-10-12","等待上门处理","未支付","深圳市宝安福海街道海峰村4巷","30元","130元","更换电路板","160元",]
+            userdefaults.set(mydingdanging, forKey: "mydingdanging")
+            
+            userdefaults.synchronize()
+        }
+
         
         if #available(iOS 11.0, *){
             tableView.contentInsetAdjustmentBehavior = .never
@@ -94,7 +111,7 @@ class SHMineDingController: SHBaseController {
             
         }
         
-        rightBtn.isSelected = true
+        leftBtn.isSelected = true
     }
 
     
@@ -102,21 +119,16 @@ class SHMineDingController: SHBaseController {
     sender.isSelected = true
     if sender == leftBtn {
         rightBtn.isSelected = false
+        
     }else
     {
         leftBtn.isSelected = false
 
     }
+    
+    self.tableView.reloadData()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
 extension SHMineDingController : UITableViewDelegate,UITableViewDataSource{
@@ -127,16 +139,52 @@ extension SHMineDingController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: SHDingdanCell.self)
-        
-        cell.addressLab.text = "地址：深圳市宝安福海街道海峰村4巷"
-        
-        cell.peopleLab.text = "联系人：李林哲 13756589954"
-        cell.timeLab.text = "维修时间：2019-10-12"
-        cell.tipLabel.text = "故障：电脑黑屏，系统奔溃"
-        cell.baoxiuLab.text = "是否支付：未支付"
+        var address:NSString;
+        var peopleLab:NSString;
+        var timeLab:NSString;
+        var tipLabel:NSString;
+        var baoxiuLab:NSString;
+        var statusLab:NSString;
+        var name:NSString;
+
+//        ["李林哲 13756589954","电脑","黑屏卡机","2019-10-12","等待上门处理","未支付","深圳市宝安福海街道海峰村4巷","30元","130元","更换电路板","160元",]
+        if leftBtn.isSelected {
+             var mysubDate = UserDefaults.standard.object(forKey: "mydingdanging") as! [String]
+            name = mysubDate[1] as NSString;
+
+            address = mysubDate[6] as NSString;
+            peopleLab = mysubDate[0] as NSString
+            
+            timeLab = mysubDate[3] as NSString
+            
+            tipLabel = mysubDate[2] as NSString
+            
+            baoxiuLab = mysubDate[5] as NSString
+            statusLab = mysubDate[4] as NSString
+
+        } else
+        {
+            address = mydingdangDone[6] as NSString;
+            peopleLab = mydingdangDone[0] as NSString
+            
+            timeLab = mydingdangDone[3] as NSString
+            name = mydingdangDone[1] as NSString;
+
+            tipLabel = mydingdangDone[2] as NSString
+            
+            baoxiuLab = mydingdangDone[5] as NSString
+            statusLab = mydingdangDone[4] as NSString
+        }
+        cell.addressLab.text = "地址：\(address)"
+//
+        cell.peopleLab.text = "联系人：\(peopleLab)"
+        cell.timeLab.text = "维修时间：\(timeLab)"
+        cell.tipLabel.text = "故障：\(name )\(tipLabel)"
+        cell.baoxiuLab.text = "是否支付：\(baoxiuLab)"
         cell.baoxiuLab.textColor = UIColor.red
-        cell.statusLab.text = "订单状态：等待处理"
+        cell.statusLab.text = "订单状态：\(statusLab)"
         cell.attentionBtn.isHidden = true;
+        
         cell.contentView.backgroundColor = UIColor.init(r: 223, g: 223, b: 223)
         
         cell.contentView.layer.cornerRadius = 10;
@@ -156,6 +204,18 @@ extension SHMineDingController : UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = SHdingDetailController()
+        if leftBtn.isSelected {
+            var mysubDate = UserDefaults.standard.object(forKey: "mydingdanging") as! [String]
+
+            vc.type = "任务中"
+            vc.daTaSubList = mysubDate;
+
+        } else
+        {
+            vc.type = "已完成"
+            vc.daTaSubList = mydingdangDone;
+
+        }
         navigationController?.pushViewController(vc, animated: true)
         
      

@@ -10,6 +10,9 @@ import UIKit
 
 class SHdingDetailController: SHBaseController {
 
+    
+    var type : NSString?
+    
     lazy var tableView : UITableView  = {
         
         let tab = UITableView(frame: view.bounds, style: .grouped)
@@ -19,7 +22,8 @@ class SHdingDetailController: SHBaseController {
         tab.register(cellType: SHMineTabCell.self)
         return tab
     }()
-    var  daTaSubList = ["李林哲 13756589954","电脑","黑屏卡机","2019-10-12","等待上门处理","未支付","深圳市宝安福海街道海峰村4巷","30元","130元","更换电路板","160元",]
+    var  daTaSubList:[String] = []
+//        ["李林哲 13756589954","电脑","黑屏卡机","2019-10-12","等待上门处理","未支付","深圳市宝安福海街道海峰村4巷","30元","130元","更换电路板","160元",]
     
     var daTaList = ["姓名","类别","故障","维修时间","订单状态","是否支付","地址","人工费","维修费","具体材料","合计"]
     
@@ -28,7 +32,6 @@ class SHdingDetailController: SHBaseController {
         
         super.viewDidLoad()
         title = "订单详情"
-        
         view.backgroundColor = UIColor.background
         if #available(iOS 11.0, *){
             tableView.contentInsetAdjustmentBehavior = .never
@@ -52,10 +55,16 @@ class SHdingDetailController: SHBaseController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        if type == "任务中" {
+            daTaSubList = UserDefaults.standard.object(forKey: "mydingdanging") as! [String]
+
+        }
         
         tableView.reloadData()
         
     }
+    
+
     
     
 }
@@ -70,13 +79,20 @@ extension SHdingDetailController : UITableViewDelegate,UITableViewDataSource{
         cell.subLab.text = daTaSubList[indexPath.row]
         cell.tipLabel.text = daTaList[indexPath.row]
         
-       
-        if indexPath.row>6 {
-            cell.accessoryType = .disclosureIndicator
-        } else
+        if type == "任务中" {
+            if indexPath.row>6 {
+                cell.accessoryType = .disclosureIndicator
+            } else
+            {
+                cell.accessoryType = .none
+            }
+        }else
         {
             cell.accessoryType = .none
+
         }
+       
+
         
         
         return cell
@@ -99,23 +115,50 @@ extension SHdingDetailController : UITableViewDelegate,UITableViewDataSource{
         view.addSubview(submitBtn)
         submitBtn .setTitle("提交", for: .normal)
         submitBtn.backgroundColor = UIColor(r: 247, g: 114, b: 82)
-        return view
+        if type == "任务中" {
+  
+            return view
+            
+        }else
+        {
+            return nil;
+            
+        }
+      
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 50;
+        
+        if type == "任务中" {
+            return 50;
+
+        }else
+        {
+            return 0;
+
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+//        mydingdanging = ["李林哲 13756589954","电脑","黑屏卡机","2019-10-12","等待上门处理","未支付","深圳市宝安福海街道海峰村4巷","30元","130元","更换电路板","160元",]
         let modelVC = SHModelViewController()
         modelVC.indexPath = indexPath.row;
-        
-        if indexPath.row < 6 {
-            view.showXHToastCenterWithText("不能修改手机号")
-            return
+        if type == "任务中" {
+            if indexPath.row < 6 {
+                return
+            }
+            
+
+            modelVC.type = "任务中"; navigationController?.pushViewController(modelVC, animated: true)
+
+        }else
+        {
+          
+    view.showXHToastCenterWithText("订单已完成，不能修改价格")
+                
+            
+            
         }
-        navigationController?.pushViewController(modelVC, animated: true)
     }
 
 
