@@ -51,8 +51,21 @@ class SHMineViewController: SHBaseController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        let userdefaults = UserDefaults.standard
+
+        let tempList =  userdefaults.object(forKey: "daTaSubList")
+        if daTaSubList == nil {
+            
+            userdefaults.set(["小草哥","男","13788889999","深圳后海大道101","70kg","173CM","二级工程师","维修家电"], forKey: "daTaSubList")
+            
+            userdefaults.synchronize()
+            
+            daTaSubList = ["小草哥","男","13788889999","深圳后海大道101","70kg","173CM","二级工程师","维修家电"]
+        } else
+        {
+            daTaSubList = tempList as! [String];
+        }
         
-        daTaSubList = UserDefaults.standard.object(forKey: "daTaSubList") as! [String]
         
         tableView.reloadData()
         
