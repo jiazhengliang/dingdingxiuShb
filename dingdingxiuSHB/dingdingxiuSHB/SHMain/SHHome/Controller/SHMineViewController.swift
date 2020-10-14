@@ -12,7 +12,7 @@ class SHMineViewController: SHBaseController {
 
     lazy var tableView : UITableView  = {
         
-        let tab = UITableView(frame: view.bounds, style: .grouped)
+        let tab = UITableView(frame: view.bounds, style: .plain)
         tab.backgroundColor = UIColor.white
         tab.delegate = self;
         tab.dataSource = self
@@ -109,6 +109,7 @@ extension SHMineViewController : UITableViewDelegate,UITableViewDataSource{
             view.showXHToastCenterWithText("不能修改手机号")
             return
         }
+        modelVC.hidesBottomBarWhenPushed = true;
         navigationController?.pushViewController(modelVC, animated: true)
     }
     

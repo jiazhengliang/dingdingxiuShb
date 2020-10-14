@@ -12,9 +12,9 @@ pod 'MBProgressHUD'
 pod 'HMSegmentedControl'
 pod 'IQKeyboardManagerSwift'
 pod 'EmptyDataSet-Swift'
-pod 'UINavigation-SXFixSpace-Swift'
+pod "UINavigation-SXFixSpace"
 #import "SVProgressHUD.h"
 pod 'SVProgressHUD'
-
+pod 'SwiftyJSON'
 pod 'XHToastSwift'
 end

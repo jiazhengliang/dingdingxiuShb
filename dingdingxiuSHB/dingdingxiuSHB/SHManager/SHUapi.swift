@@ -61,11 +61,11 @@ enum SHUapi {
 
 extension SHUapi: TargetType {
     
-    var baseURL: URL { return URL(string: "http://app.u17.com/v3/appV3_3/ios/phone")! }
+    var baseURL: URL { return URL(string: "http://192.168.11.171:8080")! }
     
     var path: String {
         switch self {
-        case .searchHot: return "search/hotkeywordsnew"
+        case .searchHot: return "/dg-mall-news/headline/home-address/queryArea"
         case .searchRelative: return "search/relative"
         case .searchResult: return "search/searchResult"
             
@@ -89,7 +89,7 @@ extension SHUapi: TargetType {
         }
     }
     
-    var method: Moya.Method { return .get }
+    var method: Moya.Method { return .post }
     var task: Task {
         var parmeters: [String : Any] = [:]
         switch self {

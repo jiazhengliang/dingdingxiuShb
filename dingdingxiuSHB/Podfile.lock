@@ -24,8 +24,9 @@ PODS:
   - SnapKitExtend (1.0.7):
     - SnapKit
   - SVProgressHUD (2.2.5)
+  - SwiftyJSON (5.0.0)
   - Then (2.5.0)
-  - UINavigation-SXFixSpace-Swift (1.2.1)
+  - UINavigation-SXFixSpace (1.2.4)
   - XHToastSwift (1.2.0)
 
 DEPENDENCIES:
@@ -41,12 +42,13 @@ DEPENDENCIES:
   - Reusable
   - SnapKitExtend
   - SVProgressHUD
+  - SwiftyJSON
   - Then
-  - UINavigation-SXFixSpace-Swift
+  - UINavigation-SXFixSpace
   - XHToastSwift
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - EmptyDataSet-Swift
     - HandyJSON
@@ -63,8 +65,10 @@ SPEC REPOS:
     - SnapKitExtend
     - SVProgressHUD
     - Then
-    - UINavigation-SXFixSpace-Swift
     - XHToastSwift
+  trunk:
+    - SwiftyJSON
+    - UINavigation-SXFixSpace
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -82,10 +86,11 @@ SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SnapKitExtend: 00ee4db6d1f80bee01a1e75745f2a6ae695ba662
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Then: 0157115e883545c77967b452fe74a1d25fb796e1
-  UINavigation-SXFixSpace-Swift: 648140526154fdbfdcc6f55a6ac030b1f603a176
+  UINavigation-SXFixSpace: 10f223253ebff2ceefa26694e23b7694269763c4
   XHToastSwift: 002de3bf4143fc3286d9cb2e4585b681e175e061
 
-PODFILE CHECKSUM: 40fd16998920772f6380259619eb08db4fe32607
+PODFILE CHECKSUM: 7fb388a1b5e13d92b7d30bc9d6e4d5e30dfd135c
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.3

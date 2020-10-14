@@ -16,7 +16,6 @@ import Kingfisher
 import Reusable
 import LLCycleScrollView
 import IQKeyboardManagerSwift
-import UINavigation_SXFixSpace_Swift
 import EmptyDataSet_Swift
 
 @UIApplicationMain
@@ -50,8 +49,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func configBase() {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true;
-        UINavigationSXFixSpace.shared.sx_defultFixSpace = 8;
-        UINavigationSXFixSpace.shared.sx_disableFixSpace = false;
+//        UINavigationSXFixSpace.shared.sx_defultFixSpace = 8;
+//        UINavigationSXFixSpace.shared.sx_disableFixSpace = false;
         
         //MARK: 性别缓存
         let defaults = UserDefaults.standard

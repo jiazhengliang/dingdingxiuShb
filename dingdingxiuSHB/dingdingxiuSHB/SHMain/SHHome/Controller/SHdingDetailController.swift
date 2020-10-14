@@ -15,7 +15,7 @@ class SHdingDetailController: SHBaseController {
     
     lazy var tableView : UITableView  = {
         
-        let tab = UITableView(frame: view.bounds, style: .grouped)
+        let tab = UITableView(frame: view.bounds, style: .plain)
         tab.backgroundColor = UIColor.white
         tab.delegate = self;
         tab.dataSource = self
@@ -61,13 +61,24 @@ class SHdingDetailController: SHBaseController {
         }
         
         tableView.reloadData()
-        
+//        tabBarController?.hidesBottomBarWhenPushed = true;
     }
     
 
+
+
+
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+//        tabBarController?.hidesBottomBarWhenPushed = false;
+    }
     
     
 }
+
+
 extension SHdingDetailController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return daTaList.count

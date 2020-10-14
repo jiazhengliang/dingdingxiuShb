@@ -12,7 +12,7 @@ class SHDingDanController: SHBaseController {
 
     lazy var tableView : UITableView  = {
         
-        let tab = UITableView(frame: view.bounds, style: .grouped)
+        let tab = UITableView(frame: view.bounds, style: .plain)
         tab.backgroundColor = UIColor.white
         tab.delegate = self;
         tab.dataSource = self

@@ -7,16 +7,31 @@
 //
 
 import UIKit
-
+import Alamofire
+import HandyJSON
+import SwiftyJSON
+import SwiftUI
 class SHLoginViewController: SHBaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         view.backgroundColor = UIColor.init(r: 234, g: 234, b: 234)
+        
+//        if  passWordString == "8888" && phoneString == "13288889999"{
+
         
         // Do any additional setup after loading the view.
     }
+    
+   
+    lazy  var infoArray:NSMutableArray = {
+        let array = NSMutableArray()
+        
+        return array
+    }()
+    
     
     lazy var headerView:UIView = {
         
@@ -250,7 +265,7 @@ class SHLoginViewController: SHBaseController {
         }
         print("点击了登录")
         
-        SVProgressHUD.show()
+//        SVProgressHUD.show()
         
         if  passWordString == "8888" && phoneString == "13288889999"{
             self.perform(#selector(loadData), with: nil, afterDelay: 1.0)
@@ -308,19 +323,123 @@ class SHLoginViewController: SHBaseController {
     //MARK: 登录成功
     @objc private func loadData()
     {
+        let urlStr = "http://192.168.11.171:8080/dg-mall-news/headline/home-address/queryArea"
         
-        ApiLoadingProvider.request(.subscribeList, model: SubscribeListModel.self) { (returnData) in
-                SVProgressHUD.dismiss()
+        Alamofire.request(urlStr,method: .post).responseJSON { (response) in
+            switch response.result{
+            case .success(let json):
+                let tResult = json as! NSDictionary
+
+                if let jsonss = response.result.value {
+                    let model = jsonModel()
+                    let jsonDict = JSON(json)
+                    model.resultCode = jsonDict["resultCode"].string ?? ""
+                    
+
+                    
+                    
+                    for i in 0..<jsonDict["result"].count  {
+                        
+                        let subModel = Content()
+                        
+                        let subDic = jsonDict["result"][i]
+                        
+                        subModel.fd_area_name = subDic["fd_area_name"].string ?? ""
+                        subModel.fd_area_code = subDic["fd_area_code"].int!
+
+                       
+                        self.infoArray.add(subModel)
+                        print(subModel.fd_area_name)
+                    }
+                    
+                    print(self.infoArray)
+
+                    let subModel:Content = self.infoArray[3] as! Content
+                    
+                    print(subModel.fd_area_name)
+                }
+                    //                    model.result = jsonDict["result"]
+                do{
+                    print(tResult)
+                    let jsonData = try JSONSerialization.data(withJSONObject: tResult  as Any, options: [])
+                    let jsonModels = try JSONDecoder().decode(jsonModel.self, from: jsonData)
+                    print("-----------------")
+                    print(jsonModels)
+                    
+                    var submodel = jsonModels.result![2];
+                    
+                    print(submodel.fd_area_name)
+
+                    print("-----------------")
+                    
+                }catch{
+                    print(error)
+                }
+              
+                    
+//                }
             
-            let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.window?.rootViewController = SHTabBarController()
+               
+                
+                
 
-            appDelegate.window?.makeKeyAndVisible()
-//                UIApplication.shared.window?.rootViewController = NavigationBaseController(rootViewController: HomeViewController())
-//                window?.makeKeyAndVisible()
+                print(response.request)
+                print(response.response)
+                print(response.data)
+                print(response.result)
+            
+                
+
+//                let shares = try JSONDecoder().decode([Share].self, from: jsonData)
+                
+//                let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+//                appDelegate.window?.rootViewController = SHTabBarController()
+//
+//                appDelegate.window?.makeKeyAndVisible()
+                break
+                
+            case .failure(let error):
+                print("error:\(error)")
+                
+                break
             }
-     
+        }
+        
+//        self.loadDataByAFN()
+        
+        
+//        ApiLoadingProvider.request(.searchHot, model: SubscribeListModel.self) { (returnData) in
+//                SVProgressHUD.dismiss()
+//
+//            let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+//            appDelegate.window?.rootViewController = SHTabBarController()
+//
+//            appDelegate.window?.makeKeyAndVisible()
+////                UIApplication.shared.window?.rootViewController = NavigationBaseController(rootViewController: HomeViewController())
+////                window?.makeKeyAndVisible()
+//            }
+//
 
+        
+
+    }
+    
+    /// 类AFN请求
+    func loadDataByAFN() {
+        let urlStr = "http://192.168.11.171:8080/dg-mall-news/headline/home-address/queryArea"
+
+        NetworkTools.POST(url: urlStr, params: nil, success: { (json) in
+            let decoder = JSONDecoder()
+            
+            
+//            let model = try? decoder.decode(DMModel.self, from: json)
+            
+            print("json:\(json)")
+//                self.model = model
+        
+        }) { (state_code, message) in
+            
+        }
     }
     @objc func delayResignClick() {
         SVProgressHUD.dismiss()
@@ -328,6 +447,11 @@ class SHLoginViewController: SHBaseController {
     }
     override func configUI() {
         view.addSubview(headerView)
+        
+        phonetext.text = "13288889999"
+        passWordtext.text = "8888"
+//        if  passWordString == "8888" && phoneString == "13288889999"{
+
         headerView.snp.makeConstraints {
             $0.left.top.right.equalToSuperview()
         }

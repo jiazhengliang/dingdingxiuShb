@@ -51,6 +51,10 @@ class SHBaseController: UIViewController {
             
             if navi.viewControllers.count > 1{
                 navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav_back_white"), style: .plain, target: self, action: #selector(pressBack))
+                tabBarController?.hidesBottomBarWhenPushed = true;
+            }else
+            {
+                tabBarController?.hidesBottomBarWhenPushed = false;
             }
         }
         
@@ -62,6 +66,12 @@ class SHBaseController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        
+    }
     /*
     // MARK: - Navigation
 

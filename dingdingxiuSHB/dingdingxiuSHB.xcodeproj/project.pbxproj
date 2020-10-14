@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -60,6 +60,8 @@
 		04D190CF22D2141500F212D2 /* SHTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D190CE22D2141500F212D2 /* SHTabBarController.swift */; };
 		04D190D122D378D200F212D2 /* SHListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D190D022D378D200F212D2 /* SHListController.swift */; };
 		4D260580CA6B351CD948B8FC /* libPods-dingdingxiuSHB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D84F09EBAC502F40BB41A0E9 /* libPods-dingdingxiuSHB.a */; };
+		DF4DDD2925368FCB0050AF67 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4DDD2825368FCB0050AF67 /* NetworkTools.swift */; };
+		DF4DDD2E25369F000050AF67 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4DDD2D25369F000050AF67 /* BaseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +144,8 @@
 		367E15E416DB4B8F45DC67A4 /* Pods-dingdingxiuSHB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dingdingxiuSHB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dingdingxiuSHB/Pods-dingdingxiuSHB.debug.xcconfig"; sourceTree = "<group>"; };
 		A0F52DDCAB68FCF4EC00C3F6 /* Pods-dingdingxiuSHB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dingdingxiuSHB.release.xcconfig"; path = "Pods/Target Support Files/Pods-dingdingxiuSHB/Pods-dingdingxiuSHB.release.xcconfig"; sourceTree = "<group>"; };
 		D84F09EBAC502F40BB41A0E9 /* libPods-dingdingxiuSHB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dingdingxiuSHB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF4DDD2825368FCB0050AF67 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		DF4DDD2D25369F000050AF67 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +275,8 @@
 			isa = PBXGroup;
 			children = (
 				04D1909622C3C5D900F212D2 /* SHUapi.swift */,
+				DF4DDD2825368FCB0050AF67 /* NetworkTools.swift */,
+				DF4DDD2D25369F000050AF67 /* BaseModel.swift */,
 			);
 			path = SHManager;
 			sourceTree = "<group>";
@@ -581,26 +587,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-dingdingxiuSHB/Pods-dingdingxiuSHB-resources.sh",
-				"${PODS_ROOT}/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle",
-				"${PODS_ROOT}/LLCycleScrollView/Lib/LLCycleScrollView.bundle",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-dingdingxiuSHB/Pods-dingdingxiuSHB-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LLCycleScrollView.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-dingdingxiuSHB/Pods-dingdingxiuSHB-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dingdingxiuSHB/Pods-dingdingxiuSHB-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dingdingxiuSHB/Pods-dingdingxiuSHB-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4A0D1F18040DE3A0D7AF47B7 /* [CP] Check Pods Manifest.lock */ = {
@@ -639,6 +634,7 @@
 				04D1908922C3C4FF00F212D2 /* UIImageExtensions.swift in Sources */,
 				04D190AE22CE32DF00F212D2 /* SHPageController.swift in Sources */,
 				04D190A522C6F04500F212D2 /* SHModel.swift in Sources */,
+				DF4DDD2925368FCB0050AF67 /* NetworkTools.swift in Sources */,
 				04D1909522C3C4FF00F212D2 /* UNoticeBar.swift in Sources */,
 				04D1908522C3C4FF00F212D2 /* UIColorExtension.swift in Sources */,
 				04D190D122D378D200F212D2 /* SHListController.swift in Sources */,
@@ -665,6 +661,7 @@
 				04D190CB22D105EF00F212D2 /* SHMineViewController.swift in Sources */,
 				04D1908822C3C4FF00F212D2 /* UIDeviceExtension.swift in Sources */,
 				04D1909A22C3C6CC00F212D2 /* JXPopupView.swift in Sources */,
+				DF4DDD2E25369F000050AF67 /* BaseModel.swift in Sources */,
 				04D1909B22C3C6CC00F212D2 /* Global.swift in Sources */,
 				04D190B522CE47C500F212D2 /* SHComicCHead.swift in Sources */,
 				04D1908122C3C4FF00F212D2 /* EWDataPickerPresentAnimated.swift in Sources */,
@@ -849,8 +846,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = GDY9P9U7PJ;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HTCPUB9BP2;
 				INFOPLIST_FILE = dingdingxiuSHB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -859,7 +857,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jzl.dingdingxiuSHB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = dingdingxiuShb_dev;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "dingdingxiuSHB/dingdingxiuSHB-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -874,9 +872,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = GDY9P9U7PJ;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HTCPUB9BP2;
 				INFOPLIST_FILE = dingdingxiuSHB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -885,7 +883,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jzl.dingdingxiuSHB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = dingdingxiu_appstore;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "dingdingxiuSHB/dingdingxiuSHB-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
