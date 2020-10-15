@@ -38,8 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configBase()
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white;
-        
-        window?.rootViewController = SHLoginViewController()
+         
+        window?.rootViewController =  UINavigationController(rootViewController: SHSelectViewController())
         window?.makeKeyAndVisible()
         
         return true

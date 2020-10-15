@@ -62,6 +62,7 @@
 		4D260580CA6B351CD948B8FC /* libPods-dingdingxiuSHB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D84F09EBAC502F40BB41A0E9 /* libPods-dingdingxiuSHB.a */; };
 		DF4DDD2925368FCB0050AF67 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4DDD2825368FCB0050AF67 /* NetworkTools.swift */; };
 		DF4DDD2E25369F000050AF67 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4DDD2D25369F000050AF67 /* BaseModel.swift */; };
+		DF4DDD872537E65D0050AF67 /* SHSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4DDD862537E65D0050AF67 /* SHSelectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,7 @@
 		D84F09EBAC502F40BB41A0E9 /* libPods-dingdingxiuSHB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dingdingxiuSHB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF4DDD2825368FCB0050AF67 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		DF4DDD2D25369F000050AF67 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		DF4DDD862537E65D0050AF67 /* SHSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHSelectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -439,6 +441,7 @@
 				043C6AFA22D4D55B0094B46E /* SHMineDingController.swift */,
 				04D190D022D378D200F212D2 /* SHListController.swift */,
 				043C6AFC22D62D690094B46E /* SHdingDetailController.swift */,
+				DF4DDD862537E65D0050AF67 /* SHSelectViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -666,6 +669,7 @@
 				04D190B522CE47C500F212D2 /* SHComicCHead.swift in Sources */,
 				04D1908122C3C4FF00F212D2 /* EWDataPickerPresentAnimated.swift in Sources */,
 				04D1903122C3BDAD00F212D2 /* ViewController.swift in Sources */,
+				DF4DDD872537E65D0050AF67 /* SHSelectViewController.swift in Sources */,
 				04D190CF22D2141500F212D2 /* SHTabBarController.swift in Sources */,
 				04D1909122C3C4FF00F212D2 /* UHairPowder.swift in Sources */,
 				04D1908622C3C4FF00F212D2 /* UIViewExtension.swift in Sources */,
