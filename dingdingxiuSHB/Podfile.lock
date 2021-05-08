@@ -28,6 +28,9 @@ PODS:
   - Then (2.5.0)
   - UINavigation-SXFixSpace (1.2.4)
   - XHToastSwift (1.2.0)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - EmptyDataSet-Swift
@@ -46,6 +49,7 @@ DEPENDENCIES:
   - Then
   - UINavigation-SXFixSpace
   - XHToastSwift
+  - YYKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -69,6 +73,7 @@ SPEC REPOS:
   trunk:
     - SwiftyJSON
     - UINavigation-SXFixSpace
+    - YYKit
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -90,7 +95,8 @@ SPEC CHECKSUMS:
   Then: 0157115e883545c77967b452fe74a1d25fb796e1
   UINavigation-SXFixSpace: 10f223253ebff2ceefa26694e23b7694269763c4
   XHToastSwift: 002de3bf4143fc3286d9cb2e4585b681e175e061
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 7fb388a1b5e13d92b7d30bc9d6e4d5e30dfd135c
+PODFILE CHECKSUM: da5b5306e4e20fd8713c428a1096a3868ad27a50
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1

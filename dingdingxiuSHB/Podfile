@@ -17,4 +17,5 @@ pod "UINavigation-SXFixSpace"
 pod 'SVProgressHUD'
 pod 'SwiftyJSON'
 pod 'XHToastSwift'
+pod 'YYKit'
 end

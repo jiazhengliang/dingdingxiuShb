@@ -63,6 +63,8 @@
 		DF4DDD2925368FCB0050AF67 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4DDD2825368FCB0050AF67 /* NetworkTools.swift */; };
 		DF4DDD2E25369F000050AF67 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4DDD2D25369F000050AF67 /* BaseModel.swift */; };
 		DF4DDD872537E65D0050AF67 /* SHSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4DDD862537E65D0050AF67 /* SHSelectViewController.swift */; };
+		DFB0C3FD26453D0700D2B142 /* addressmodel.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB0C3FC26453D0700D2B142 /* addressmodel.m */; };
+		DFB0C421264627AF00D2B142 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB0C420264627AF00D2B142 /* UINavigationController+FDFullscreenPopGesture.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +150,10 @@
 		DF4DDD2825368FCB0050AF67 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		DF4DDD2D25369F000050AF67 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		DF4DDD862537E65D0050AF67 /* SHSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHSelectViewController.swift; sourceTree = "<group>"; };
+		DFB0C3FB26453D0700D2B142 /* addressmodel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = addressmodel.h; sourceTree = "<group>"; };
+		DFB0C3FC26453D0700D2B142 /* addressmodel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = addressmodel.m; sourceTree = "<group>"; };
+		DFB0C41F264627AF00D2B142 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		DFB0C420264627AF00D2B142 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +261,8 @@
 		04D1905D22C3C3BA00F212D2 /* SHLib */ = {
 			isa = PBXGroup;
 			children = (
+				DFB0C41F264627AF00D2B142 /* UINavigationController+FDFullscreenPopGesture.h */,
+				DFB0C420264627AF00D2B142 /* UINavigationController+FDFullscreenPopGesture.m */,
 				04D1906622C3C4FF00F212D2 /* CommonHelper.swift */,
 				04D1907122C3C4FF00F212D2 /* Component */,
 				04D1906422C3C4FF00F212D2 /* EWDataPickerPresentAnimated.swift */,
@@ -402,8 +410,9 @@
 			isa = PBXGroup;
 			children = (
 				04D190B322CE473F00F212D2 /* Controller */,
-				04D190B222CE473400F212D2 /* Model */,
 				04D190B122CE472C00F212D2 /* View */,
+				DFB0C3FB26453D0700D2B142 /* addressmodel.h */,
+				DFB0C3FC26453D0700D2B142 /* addressmodel.m */,
 			);
 			path = SHHome;
 			sourceTree = "<group>";
@@ -421,13 +430,6 @@
 				04D190C222D0ED5F00F212D2 /* SHAlertView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		04D190B222CE473400F212D2 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		04D190B322CE473F00F212D2 /* Controller */ = {
@@ -666,6 +668,7 @@
 				04D1909A22C3C6CC00F212D2 /* JXPopupView.swift in Sources */,
 				DF4DDD2E25369F000050AF67 /* BaseModel.swift in Sources */,
 				04D1909B22C3C6CC00F212D2 /* Global.swift in Sources */,
+				DFB0C3FD26453D0700D2B142 /* addressmodel.m in Sources */,
 				04D190B522CE47C500F212D2 /* SHComicCHead.swift in Sources */,
 				04D1908122C3C4FF00F212D2 /* EWDataPickerPresentAnimated.swift in Sources */,
 				04D1903122C3BDAD00F212D2 /* ViewController.swift in Sources */,
@@ -680,6 +683,7 @@
 				04D190B722D06F7300F212D2 /* SHURankTCell.swift in Sources */,
 				04D1902F22C3BDAD00F212D2 /* AppDelegate.swift in Sources */,
 				04D190BB22D0E41A00F212D2 /* SHComicCCell.swift in Sources */,
+				DFB0C421264627AF00D2B142 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				04D1908F22C3C4FF00F212D2 /* URefresh.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -852,9 +856,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HTCPUB9BP2;
+				DEVELOPMENT_TEAM = K3H3VBJLB3;
 				INFOPLIST_FILE = dingdingxiuSHB/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -865,7 +869,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "dingdingxiuSHB/dingdingxiuSHB-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -878,9 +882,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HTCPUB9BP2;
+				DEVELOPMENT_TEAM = K3H3VBJLB3;
 				INFOPLIST_FILE = dingdingxiuSHB/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -890,7 +894,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "dingdingxiuSHB/dingdingxiuSHB-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

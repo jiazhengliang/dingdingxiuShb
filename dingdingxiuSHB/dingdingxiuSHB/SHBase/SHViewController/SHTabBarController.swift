@@ -19,24 +19,24 @@ class SHTabBarController: UITabBarController {
         let classVC = SHListController()
         addChildViewController(classVC,
                                title: "广场",
-                               image: UIImage(named: "tabbar_nor_1"),
-                               selectedImage: UIImage(named: "tabbar_hor_1"))
+                               image: UIImage(named: "tab_home_nor"),
+                               selectedImage: UIImage(named: "tab_home_hor"))
         
         
         /// 书架
         let bookVC = SHMineDingController()
         addChildViewController(bookVC,
                                title: "任务",
-                               image: UIImage(named: "tabbar_nor_2"),
-                               selectedImage: UIImage(named: "tabbar_hor_2"))
+                               image: UIImage(named: "tab_find_nor"),
+                               selectedImage: UIImage(named: "tab_find_hor"))
         
         
         /// 我的
         let mineVC = SHMineViewController()
         addChildViewController(mineVC,
                                title: "我的",
-                               image: UIImage(named: "tabbar_nor_3"),
-                               selectedImage: UIImage(named: "tabbar_hor_3"))
+                               image: UIImage(named: "tab_Yoga_nor"),
+                               selectedImage: UIImage(named: "tab_Yoga_hor"))
         
         // Do any additional setup after loading the view.
     }
@@ -47,8 +47,8 @@ class SHTabBarController: UITabBarController {
         let item = UITabBarItem(title: title,
                                           image: image?.withRenderingMode(.alwaysOriginal),
                                           selectedImage: selectedImage?.withRenderingMode(.alwaysOriginal))
-//        item.
-        var attributes = [NSAttributedString.Key.foregroundColor: UIColor(red: 220.0/255.0, green: 104.0/255.0, blue: 1.0/255.0, alpha: 1.0),
+//        item.136, 129, 231
+        var attributes = [NSAttributedString.Key.foregroundColor: UIColor(red: 136/255.0, green: 129/255.0, blue: 231/255.0, alpha: 1.0),
                            NSAttributedString.Key.font: UIFont(name: "Heiti SC", size: 24.0)!]
         item.setTitleTextAttributes(attributes , for: .selected)
 

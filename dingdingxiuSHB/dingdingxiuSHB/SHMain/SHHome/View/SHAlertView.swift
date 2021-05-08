@@ -89,8 +89,8 @@ class SHAlertView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    let heigth:CGFloat = 45
-    let width:CGFloat = screenWidth/2 - 20
+    let kheigth:CGFloat = 45
+    let kwidth:CGFloat = screenWidth/2 - 20
     
     
     var datearray : NSArray? {
@@ -128,10 +128,10 @@ class SHAlertView: UIView {
                 if index%2 == 0 {
                     row = row + 1
                 }
-                let x:CGFloat =  (width ) * CGFloat(index%2)
-                let y:CGFloat =   (heigth ) * CGFloat(row) + 30
+                let x:CGFloat =  (kwidth ) * CGFloat(index%2)
+                let y:CGFloat =   (kheigth ) * CGFloat(row) + 30
                 
-                sub1.frame = CGRect(x: x, y: y, width: width, height: heigth)
+                sub1.frame = CGRect(x: x, y: y, width: kwidth, height: kheigth)
                 sub1.addTarget(self, action: #selector(didseleBtn), for: .touchUpInside)
                 
                 

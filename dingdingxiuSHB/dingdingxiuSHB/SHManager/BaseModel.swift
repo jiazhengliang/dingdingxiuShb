@@ -31,3 +31,4 @@ class Content:  Codable{
     var fd_area_name: String?
     var fd_area_code: Int?
 }
+

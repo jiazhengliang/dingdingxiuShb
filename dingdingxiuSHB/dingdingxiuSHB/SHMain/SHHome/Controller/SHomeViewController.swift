@@ -52,10 +52,10 @@ class SHomeViewController: SHBaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        title = "家电维修"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "wode"), style: .plain, target: self, action: #selector(rightBtnClick))
-        
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "tuoguan"), style: .plain, target: self, action: #selector(LeftBtnClick))
-        
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "wode"), style: .plain, target: self, action: #selector(rightBtnClick))
+//        
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "tuoguan"), style: .plain, target: self, action: #selector(LeftBtnClick))
+//        
         contentView = SHAlertView()
         
         if #available(iOS 11.0, *){

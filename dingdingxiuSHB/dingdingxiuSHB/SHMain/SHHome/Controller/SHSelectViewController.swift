@@ -9,8 +9,46 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
+
+class person {
+    var name:String
+
+    init(name:String) {
+        self.name = name
+    }
+
+    deinit {
+        print("xiaofeile niminhaoshu")
+        
+    }
+    func printname(){
+        print(name)
+    }
+    
+    func play1(param:String ,param2:(_ datasss:String) -> Void) -> Void {
+         param2(param + "---swift")
+    }
+    
+    
+}
 class SHSelectViewController: SHBaseController {
     
+    
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        title = "地址选择"
+        view.backgroundColor = UIColor.background
+        if #available(iOS 11.0, *){
+            tableView.contentInsetAdjustmentBehavior = .never
+        } else
+        {
+            automaticallyAdjustsScrollViewInsets = false
+        }
+        getData(code: "35", type: 0)
+        configUI()
+
+    }
     var type : NSString?
     
     lazy var tableView : UITableView  = {
@@ -72,23 +110,9 @@ class SHSelectViewController: SHBaseController {
         tab.font = UIFont.systemFont(ofSize: 14);
         return tab
     }()
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-        title = "地址选择"
-        view.backgroundColor = UIColor.background
-        if #available(iOS 11.0, *){
-            tableView.contentInsetAdjustmentBehavior = .never
-        } else
-        {
-            automaticallyAdjustsScrollViewInsets = false
-        }
-        getData(code: "35", type: 0)
-        configUI()
-        
-        
-    }
+
     
+
     override func configUI() {
         view.addSubview(tableView)
         view.addSubview(tableView2)
@@ -162,22 +186,22 @@ class SHSelectViewController: SHBaseController {
                     let model = jsonModel()
                     let jsonDict = JSON(json)
                     model.resultCode = jsonDict["resultCode"].string ?? ""
-                    
+               
+                    let array: [[AnyHashable : Any]] = tResult["result"] as! [[AnyHashable : Any]]
+                   
 
-                    
-                    
-                    for i in 0..<jsonDict["result"].count  {
-                        
-                        let subModel = Content()
-                        
-                        let subDic = jsonDict["result"][i]
-                        
-                        subModel.fd_area_name = subDic["fd_area_name"].string ?? ""
-                        subModel.fd_area_code = subDic["fd_area_code"].int!
+                    for i in 0..<array.count  {
 
-                       
+                        let subDic = array[i]
+
+                        let subModel = addressmodel.model(with: subDic)
+                        
+                        
+                        
+//                        subModel.fd_area_name = subDic["fd_area_name"].string ?? ""
+//                        subModel.fd_area_code = subDic["fd_area_code"].int!
+                    
                         self.daTaSubList.add(subModel)
-                        print(subModel.fd_area_name)
                     }
                     
 
@@ -242,10 +266,10 @@ extension SHSelectViewController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: SHMineTabCell.self)
-        let subModel:Content = self.daTaSubList[indexPath.row] as! Content
+        let subModel:addressmodel = self.daTaSubList[indexPath.row] as! addressmodel
        
 //        cell.subLab.text = daTaSubList[indexPath.row]
-        cell.tipLabel.text = subModel.fd_area_name;
+        cell.tipLabel.text = subModel.fd_area_name as String?;
 
         
         
@@ -260,11 +284,11 @@ extension SHSelectViewController : UITableViewDelegate,UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        let subModel:Content = self.daTaSubList[indexPath.row] as! Content
+        let subModel:addressmodel = self.daTaSubList[indexPath.row] as! addressmodel
        
         let name = subModel.fd_area_name;
         
-        self.titlLab.text = name;
+        self.titlLab.text = name as String?;
     }
 
 

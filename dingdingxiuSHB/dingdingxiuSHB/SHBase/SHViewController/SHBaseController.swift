@@ -18,7 +18,7 @@ class SHBaseController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.background
-        
+        self.fd_prefersNavigationBarHidden = true
         if #available(iOS 11.0, *) {
             UIScrollView.appearance().contentInsetAdjustmentBehavior = .never
             
@@ -46,17 +46,14 @@ class SHBaseController: UIViewController {
         guard let navi = navigationController else {
             return;
         }
-        if navi.visibleViewController == self {
-            navi.setNavigationBarHidden(false, animated: true)
-            
+    
             if navi.viewControllers.count > 1{
-                navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav_back_white"), style: .plain, target: self, action: #selector(pressBack))
                 tabBarController?.hidesBottomBarWhenPushed = true;
             }else
             {
                 tabBarController?.hidesBottomBarWhenPushed = false;
             }
-        }
+        
         
         
     }
