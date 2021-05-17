@@ -79,25 +79,9 @@ class SHomeViewController: SHBaseController {
             userdefaults.synchronize()
         }
         
+        view.addSubview(barView)
     }
-    
-    @objc func rightBtnClick(_: UIButton){
-        
-        print("点击了右键")
-//
-//        let mineVC = MineViewController()
-//
-//        self.navigationController?.pushViewController(mineVC, animated: true)
-    }
-    
-    
-    @objc func LeftBtnClick(_: UIButton){
-        
-        print("点击了右键")
-        
-//        let mineVC = DingDanController()
-//        self.navigationController?.pushViewController(mineVC, animated: true)
-    }
+
 }
 
 extension SHomeViewController:UICollectionViewDelegate,UICollectionViewDataSource,UCollectionViewSectionBackgroundLayoutDelegateLayout,AlertViewDelegate{

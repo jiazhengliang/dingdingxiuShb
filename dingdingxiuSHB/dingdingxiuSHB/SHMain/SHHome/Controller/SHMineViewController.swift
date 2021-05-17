@@ -38,12 +38,21 @@ class SHMineViewController: SHBaseController {
         }
         
         configUI()
+        tableView.snp.makeConstraints{
+            $0.top.equalTo(navigationHeight)
+            $0.right.left.bottom.equalTo(0)
+        }
+        
+        
+        view.addSubview(barView)
+        barView.setTitle("我的")
+        self.rightBtn .setTitle("设置", for: .normal)
+        barView .setRightButton(self.rightBtn)
         
     }
     
     override func configUI() {
         view.addSubview(tableView)
-        tableView.snp.makeConstraints{ $0.edges.equalTo(self.view.usnp.edges) }
         
         
         tableView.reloadData()

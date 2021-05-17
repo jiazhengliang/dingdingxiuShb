@@ -65,6 +65,8 @@
 		DF4DDD872537E65D0050AF67 /* SHSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4DDD862537E65D0050AF67 /* SHSelectViewController.swift */; };
 		DFB0C3FD26453D0700D2B142 /* addressmodel.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB0C3FC26453D0700D2B142 /* addressmodel.m */; };
 		DFB0C421264627AF00D2B142 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB0C420264627AF00D2B142 /* UINavigationController+FDFullscreenPopGesture.m */; };
+		DFB0C427264664EA00D2B142 /* YJCustomNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB0C425264664EA00D2B142 /* YJCustomNavView.m */; };
+		DFCFB1A3264BEF1F00FF9AA3 /* WkwebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCFB1A2264BEF1F00FF9AA3 /* WkwebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +156,10 @@
 		DFB0C3FC26453D0700D2B142 /* addressmodel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = addressmodel.m; sourceTree = "<group>"; };
 		DFB0C41F264627AF00D2B142 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		DFB0C420264627AF00D2B142 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		DFB0C425264664EA00D2B142 /* YJCustomNavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJCustomNavView.m; sourceTree = "<group>"; };
+		DFB0C426264664EA00D2B142 /* YJCustomNavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJCustomNavView.h; sourceTree = "<group>"; };
+		DFB0C42B2646654100D2B142 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		DFCFB1A2264BEF1F00FF9AA3 /* WkwebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WkwebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +281,7 @@
 		04D1905F22C3C3F600F212D2 /* SHCommTools */ = {
 			isa = PBXGroup;
 			children = (
+				DFB0C42B2646654100D2B142 /* Macros.h */,
 				04D1909922C3C6CB00F212D2 /* Global.swift */,
 				04D1909822C3C6CB00F212D2 /* JXPopupView.swift */,
 			);
@@ -303,6 +310,8 @@
 			isa = PBXGroup;
 			children = (
 				04D190A822C6F49400F212D2 /* SHBaseTableViewHeaderFooterView.swift */,
+				DFB0C426264664EA00D2B142 /* YJCustomNavView.h */,
+				DFB0C425264664EA00D2B142 /* YJCustomNavView.m */,
 			);
 			path = SHView;
 			sourceTree = "<group>";
@@ -444,6 +453,7 @@
 				04D190D022D378D200F212D2 /* SHListController.swift */,
 				043C6AFC22D62D690094B46E /* SHdingDetailController.swift */,
 				DF4DDD862537E65D0050AF67 /* SHSelectViewController.swift */,
+				DFCFB1A2264BEF1F00FF9AA3 /* WkwebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -667,7 +677,9 @@
 				04D1908822C3C4FF00F212D2 /* UIDeviceExtension.swift in Sources */,
 				04D1909A22C3C6CC00F212D2 /* JXPopupView.swift in Sources */,
 				DF4DDD2E25369F000050AF67 /* BaseModel.swift in Sources */,
+				DFCFB1A3264BEF1F00FF9AA3 /* WkwebViewController.swift in Sources */,
 				04D1909B22C3C6CC00F212D2 /* Global.swift in Sources */,
+				DFB0C427264664EA00D2B142 /* YJCustomNavView.m in Sources */,
 				DFB0C3FD26453D0700D2B142 /* addressmodel.m in Sources */,
 				04D190B522CE47C500F212D2 /* SHComicCHead.swift in Sources */,
 				04D1908122C3C4FF00F212D2 /* EWDataPickerPresentAnimated.swift in Sources */,

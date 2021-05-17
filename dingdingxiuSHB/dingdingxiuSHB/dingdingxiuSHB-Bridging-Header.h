@@ -16,5 +16,6 @@
 #import <YYKit/YYKit.h>
 #import "addressmodel.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
+#import "YJCustomNavView.h"
 
 #endif

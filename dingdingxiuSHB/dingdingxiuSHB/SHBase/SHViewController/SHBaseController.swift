@@ -13,7 +13,51 @@ import Reusable
 import Kingfisher
 
 class SHBaseController: UIViewController {
+    lazy var  leftBtn :UIButton = {
+        let t1 = UIButton()
+        t1.setImage(UIImage.init(named: "login_back"), for: .normal)
+        t1.frame = CGRect(x: 0, y: 0, width: 44, height: 44);
+        t1.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        t1.setTitleColor(UIColor.gray, for: .normal)
+        t1.setTitleColor(UIColor(r: 245, g: 38, b: 88, a: 1), for: .selected)
+        t1.addTarget(self, action: #selector(LeftBtnClick), for: .touchUpInside)
+        return t1
+    }()
+    
+    lazy var  rightBtn :UIButton = {
+        let t1 = UIButton()
+        t1.setTitle("", for: .normal)
+        t1.frame = CGRect(x: 0, y: 0, width: 44, height: 44);
+        t1.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        t1.setTitleColor(UIColor.gray, for: .normal)
+        t1.setTitleColor(UIColor(r: 55, g: 55, b: 55, a: 1), for: .selected)
 
+        t1.addTarget(self, action: #selector(rightBtnClick), for: .touchUpInside)
+        return t1
+    }()
+    
+    
+    @objc func rightBtnClick(_: UIButton){
+        
+        print("点击了右键")
+
+
+    }
+    
+    
+    @objc func LeftBtnClick(_: UIButton){
+        
+        print("点击了LeftBtnClick")
+        self.navigationController?.popViewController(animated: true)
+
+    }
+    lazy var barView:YJCustomNavView = {
+        let view = YJCustomNavView()
+        view.frame = CGRect(x: 0, y: 0, width: screenWidth, height: navigationHeight)
+        view.backgroundColor = UIColor.white;
+
+        return view
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
 

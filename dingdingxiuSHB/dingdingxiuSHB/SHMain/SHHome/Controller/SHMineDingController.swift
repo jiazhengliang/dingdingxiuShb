@@ -22,27 +22,7 @@ class SHMineDingController: SHBaseController {
         tab.register(cellType: SHDingdanCell.self)
         return tab
     }()
-    lazy var  leftBtn :UIButton = {
-        let t1 = UIButton()
-        t1.setTitle("任务中", for: .normal)
-        t1.titleLabel?.font = UIFont.systemFont(ofSize: 15)
-        t1.setTitleColor(UIColor.gray, for: .normal)
-        t1.setTitleColor(UIColor(r: 245, g: 38, b: 88, a: 1), for: .selected)
-        t1.addTarget(self, action: #selector(attentionBtnClick(sender:)), for: .touchUpInside)
-        return t1
-    }()
-    
-    lazy var  rightBtn :UIButton = {
-        let t1 = UIButton()
-        t1.setTitle("已完成", for: .normal)
-        t1.titleLabel?.font = UIFont.systemFont(ofSize: 15)
-        t1.setTitleColor(UIColor.gray, for: .normal)
-        t1.setTitleColor(UIColor(r: 245, g: 38, b: 88, a: 1), for: .selected)
 
-        t1.addTarget(self, action: #selector(attentionBtnClick(sender:)), for: .touchUpInside)
-        return t1
-    }()
-    
     
     var mydingdangDone = ["黄贵生 13756533323","洗衣机","不能脱水","2019-6-12","等待上门处理","已支付","深圳市宝安西乡街华富新村4巷","30元","230元","更换马达","260元",]
     
@@ -70,48 +50,15 @@ class SHMineDingController: SHBaseController {
             automaticallyAdjustsScrollViewInsets = false
         }
         tableView.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(64 + 40)
-            $0.bottom.equalToSuperview().offset(0)
-            $0.left.equalToSuperview().offset(0)
-            $0.right.equalToSuperview().offset(0)
-            
+            $0.top.equalTo(navigationHeight)
+            $0.right.left.bottom.equalTo(0)
         }
         
-        
-        let topView =  UIView(frame:CGRect.init(x: 0, y: 64, width: screenWidth, height: 40))
-        
-        topView.backgroundColor = UIColor.white
-        
-        let lineView =  UIView(frame:CGRect.init(x: 0, y: 40, width: screenWidth, height: 0.5))
-        
-        lineView.backgroundColor = UIColor.gray
-        
-        topView.addSubview(lineView)
-        view.addSubview(topView)
-        topView.addSubview(leftBtn)
-        topView.addSubview(rightBtn)
- 
-        let lineView2 =  UIView(frame:CGRect.init(x: screenWidth/2, y: 0, width: 0.5, height: 40))
 
-        lineView2.backgroundColor = UIColor.gray
-
-        topView.addSubview(lineView2)
-        leftBtn.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(0)
-            $0.bottom.equalToSuperview().offset(0)
-            $0.left.equalToSuperview().offset(0)
-            $0.width.equalTo(screenWidth/2)
-            
-        }
-        rightBtn.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(0)
-            $0.bottom.equalToSuperview().offset(0)
-            $0.right.equalToSuperview().offset(0)
-            $0.width.equalTo(screenWidth/2)
-            
-        }
         
-        leftBtn.isSelected = true
+        
+        view.addSubview(barView)
+        barView.setTitle("任务")
     }
 
     

@@ -47,16 +47,18 @@ class SHModelViewController: SHBaseController {
         
         resignNiketext.text = daTaSubList[indexPath ?? 0]
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "确定", titleColor: UIColor.gray, titleFont: UIFont.systemFont(ofSize: 13), titleEdgeInsets: UIEdgeInsets.zero, target: self, action: #selector(rightBtnClick))
+  
         
-        
+        view.addSubview(barView)
+        barView.setTitle("我的")
+        barView .setLeftButton(self.leftBtn)
     }
     
     override func configUI() {
         view.addSubview(resignNiketext)
         
         resignNiketext.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(80)
+            $0.top.equalToSuperview().offset(navigationHeight + 10)
             $0.height.equalTo(44)
             $0.left.equalToSuperview().offset(20)
             $0.right.equalToSuperview().offset(-20)
@@ -64,7 +66,7 @@ class SHModelViewController: SHBaseController {
         }
     }
     
-    @objc func rightBtnClick(_: UIButton){
+    @objc override func rightBtnClick(_: UIButton){
         
         print("点击了右键")
         
