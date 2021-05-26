@@ -26,7 +26,6 @@ spec.frameworks = 'AVFoundation', 'UIKit'
   spec.source       = { :git => "https://github.com/296019487@qq.com", :tag => "#{spec.version}" }
 
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  spec.source_files  = "dingdingxiuSHB", "dingdingxiuSHB/core/**/*.{h,m}"
 
 end
