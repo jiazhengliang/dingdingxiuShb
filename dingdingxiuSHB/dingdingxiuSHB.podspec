@@ -3,18 +3,21 @@ Pod::Spec.new do |spec|
 
 
 
-  spec.name         = "dingdingxiuShb"
+  spec.name         = "dingdingxiuSHB"
   spec.version      = "0.0.1"
-  spec.summary      = "A short description of dingdingxiuShb."
+  spec.summary      = "A short description of dingdingxiuSHB."
 
 
   spec.description  = <<-DESC
+  shuoming
                    DESC
 
-  spec.homepage     = "http://EXAMPLE/dingdingxiuShb"
+  spec.homepage     = "http://EXAMPLE/dingdingxiuSHB"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
+
+spec.frameworks = 'AVFoundation', 'UIKit'
 
   spec.license      = "MIT"
 
