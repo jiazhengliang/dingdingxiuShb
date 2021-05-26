@@ -63,10 +63,39 @@
 		DF4DDD2925368FCB0050AF67 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4DDD2825368FCB0050AF67 /* NetworkTools.swift */; };
 		DF4DDD2E25369F000050AF67 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4DDD2D25369F000050AF67 /* BaseModel.swift */; };
 		DF4DDD872537E65D0050AF67 /* SHSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4DDD862537E65D0050AF67 /* SHSelectViewController.swift */; };
+		DF95388A265B8DC80038AA3A /* SHView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF953889265B8DC80038AA3A /* SHView.swift */; };
+		DF9538AB265B90DE0038AA3A /* HJViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9538AA265B90DE0038AA3A /* HJViewModel.swift */; };
+		DF9538B0265B92940038AA3A /* RxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9538AF265B92940038AA3A /* RxViewController.swift */; };
+		DF9538B5265B92CF0038AA3A /* SHRxHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9538B4265B92CF0038AA3A /* SHRxHomeView.swift */; };
+		DF9538BB265B970B0038AA3A /* HJHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9538BA265B970B0038AA3A /* HJHomeViewModel.swift */; };
+		DF9538C3265B97BD0038AA3A /* HJTableViewHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9538C2265B97BD0038AA3A /* HJTableViewHeaderViewModel.swift */; };
+		DF9538CE265B99860038AA3A /* HJTableCollectionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9538CD265B99860038AA3A /* HJTableCollectionCellViewModel.swift */; };
+		DF9538D9265C8B3B0038AA3A /* HJHomeTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9538D8265C8B3B0038AA3A /* HJHomeTableHeaderView.swift */; };
+		DF9538DE265C8C6F0038AA3A /* HJCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9538DD265C8C6F0038AA3A /* HJCollectionViewCell.swift */; };
+		DF9538E3265C8CA80038AA3A /* HJHomeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9538E2265C8CA80038AA3A /* HJHomeCollectionCell.swift */; };
+		DF9538E8265C932A0038AA3A /* HJHomeTableSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9538E7265C932A0038AA3A /* HJHomeTableSectionView.swift */; };
+		DF9538ED265C94240038AA3A /* HJTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9538EC265C94240038AA3A /* HJTableViewCell.swift */; };
+		DF9538F2265C94610038AA3A /* HJHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9538F1265C94610038AA3A /* HJHomeTableViewCell.swift */; };
 		DFB0C3FD26453D0700D2B142 /* addressmodel.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB0C3FC26453D0700D2B142 /* addressmodel.m */; };
 		DFB0C421264627AF00D2B142 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB0C420264627AF00D2B142 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		DFB0C427264664EA00D2B142 /* YJCustomNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB0C425264664EA00D2B142 /* YJCustomNavView.m */; };
 		DFCFB1A3264BEF1F00FF9AA3 /* WkwebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCFB1A2264BEF1F00FF9AA3 /* WkwebViewController.swift */; };
+		DFE827F226575700001ECEFD /* ShiYingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE827F126575700001ECEFD /* ShiYingViewController.swift */; };
+		DFE827FB26575A81001ECEFD /* PJCommonConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE827F626575A80001ECEFD /* PJCommonConstant.swift */; };
+		DFE827FC26575A81001ECEFD /* PJColorConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE827F726575A81001ECEFD /* PJColorConstant.swift */; };
+		DFE827FD26575A81001ECEFD /* PJSizeConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE827F826575A81001ECEFD /* PJSizeConstant.swift */; };
+		DFE827FE26575A81001ECEFD /* PJFontConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE827F926575A81001ECEFD /* PJFontConstant.swift */; };
+		DFE827FF26575A81001ECEFD /* PJServerConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE827FA26575A81001ECEFD /* PJServerConstant.swift */; };
+		DFE8280426575CA3001ECEFD /* TagViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8280326575CA3001ECEFD /* TagViewCell.swift */; };
+		DFE8280C26576373001ECEFD /* DispatchTime+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8280826576373001ECEFD /* DispatchTime+Extension.swift */; };
+		DFE8280D26576373001ECEFD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8280926576373001ECEFD /* String+Extension.swift */; };
+		DFE8280E26576373001ECEFD /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8280A26576373001ECEFD /* Color+Extension.swift */; };
+		DFE8280F26576373001ECEFD /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8280B26576373001ECEFD /* Date+Extension.swift */; };
+		DFE82814265782E6001ECEFD /* WaterFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE82813265782E5001ECEFD /* WaterFlowController.swift */; };
+		DFE82819265786DB001ECEFD /* WaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE82818265786DB001ECEFD /* WaterfallLayout.swift */; };
+		DFE8281E2657880A001ECEFD /* SectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8281D2657880A001ECEFD /* SectionData.swift */; };
+		DFE8282326578815001ECEFD /* WaterfallLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8282226578815001ECEFD /* WaterfallLayoutDelegate.swift */; };
+		DFE8282826578A34001ECEFD /* WaterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8282726578A34001ECEFD /* WaterCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +181,19 @@
 		DF4DDD2825368FCB0050AF67 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		DF4DDD2D25369F000050AF67 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		DF4DDD862537E65D0050AF67 /* SHSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHSelectViewController.swift; sourceTree = "<group>"; };
+		DF953889265B8DC80038AA3A /* SHView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHView.swift; sourceTree = "<group>"; };
+		DF9538AA265B90DE0038AA3A /* HJViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJViewModel.swift; sourceTree = "<group>"; };
+		DF9538AF265B92940038AA3A /* RxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxViewController.swift; sourceTree = "<group>"; };
+		DF9538B4265B92CF0038AA3A /* SHRxHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxHomeView.swift; sourceTree = "<group>"; };
+		DF9538BA265B970B0038AA3A /* HJHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJHomeViewModel.swift; sourceTree = "<group>"; };
+		DF9538C2265B97BD0038AA3A /* HJTableViewHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJTableViewHeaderViewModel.swift; sourceTree = "<group>"; };
+		DF9538CD265B99860038AA3A /* HJTableCollectionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJTableCollectionCellViewModel.swift; sourceTree = "<group>"; };
+		DF9538D8265C8B3B0038AA3A /* HJHomeTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJHomeTableHeaderView.swift; sourceTree = "<group>"; };
+		DF9538DD265C8C6F0038AA3A /* HJCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJCollectionViewCell.swift; sourceTree = "<group>"; };
+		DF9538E2265C8CA80038AA3A /* HJHomeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJHomeCollectionCell.swift; sourceTree = "<group>"; };
+		DF9538E7265C932A0038AA3A /* HJHomeTableSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJHomeTableSectionView.swift; sourceTree = "<group>"; };
+		DF9538EC265C94240038AA3A /* HJTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJTableViewCell.swift; sourceTree = "<group>"; };
+		DF9538F1265C94610038AA3A /* HJHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJHomeTableViewCell.swift; sourceTree = "<group>"; };
 		DFB0C3FB26453D0700D2B142 /* addressmodel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = addressmodel.h; sourceTree = "<group>"; };
 		DFB0C3FC26453D0700D2B142 /* addressmodel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = addressmodel.m; sourceTree = "<group>"; };
 		DFB0C41F264627AF00D2B142 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
@@ -160,6 +202,22 @@
 		DFB0C426264664EA00D2B142 /* YJCustomNavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJCustomNavView.h; sourceTree = "<group>"; };
 		DFB0C42B2646654100D2B142 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		DFCFB1A2264BEF1F00FF9AA3 /* WkwebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WkwebViewController.swift; sourceTree = "<group>"; };
+		DFE827F126575700001ECEFD /* ShiYingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiYingViewController.swift; sourceTree = "<group>"; };
+		DFE827F626575A80001ECEFD /* PJCommonConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PJCommonConstant.swift; sourceTree = "<group>"; };
+		DFE827F726575A81001ECEFD /* PJColorConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PJColorConstant.swift; sourceTree = "<group>"; };
+		DFE827F826575A81001ECEFD /* PJSizeConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PJSizeConstant.swift; sourceTree = "<group>"; };
+		DFE827F926575A81001ECEFD /* PJFontConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PJFontConstant.swift; sourceTree = "<group>"; };
+		DFE827FA26575A81001ECEFD /* PJServerConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PJServerConstant.swift; sourceTree = "<group>"; };
+		DFE8280326575CA3001ECEFD /* TagViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewCell.swift; sourceTree = "<group>"; };
+		DFE8280826576373001ECEFD /* DispatchTime+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchTime+Extension.swift"; sourceTree = "<group>"; };
+		DFE8280926576373001ECEFD /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		DFE8280A26576373001ECEFD /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		DFE8280B26576373001ECEFD /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		DFE82813265782E5001ECEFD /* WaterFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFlowController.swift; sourceTree = "<group>"; };
+		DFE82818265786DB001ECEFD /* WaterfallLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallLayout.swift; sourceTree = "<group>"; };
+		DFE8281D2657880A001ECEFD /* SectionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionData.swift; sourceTree = "<group>"; };
+		DFE8282226578815001ECEFD /* WaterfallLayoutDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterfallLayoutDelegate.swift; sourceTree = "<group>"; };
+		DFE8282726578A34001ECEFD /* WaterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +315,7 @@
 		04D1905C22C3C39200F212D2 /* SHBase */ = {
 			isa = PBXGroup;
 			children = (
+				DF9538A9265B909C0038AA3A /* Model */,
 				04D1906322C3C4A000F212D2 /* SHViewController */,
 				04D1906222C3C49200F212D2 /* SHView */,
 				04D1906122C3C47700F212D2 /* SHmodel */,
@@ -283,7 +342,16 @@
 			children = (
 				DFB0C42B2646654100D2B142 /* Macros.h */,
 				04D1909922C3C6CB00F212D2 /* Global.swift */,
+				DFE827F726575A81001ECEFD /* PJColorConstant.swift */,
+				DFE827F626575A80001ECEFD /* PJCommonConstant.swift */,
+				DFE827F926575A81001ECEFD /* PJFontConstant.swift */,
+				DFE827FA26575A81001ECEFD /* PJServerConstant.swift */,
+				DFE827F826575A81001ECEFD /* PJSizeConstant.swift */,
 				04D1909822C3C6CB00F212D2 /* JXPopupView.swift */,
+				DFE8280A26576373001ECEFD /* Color+Extension.swift */,
+				DFE8280B26576373001ECEFD /* Date+Extension.swift */,
+				DFE8280826576373001ECEFD /* DispatchTime+Extension.swift */,
+				DFE8280926576373001ECEFD /* String+Extension.swift */,
 			);
 			path = SHCommTools;
 			sourceTree = "<group>";
@@ -312,6 +380,7 @@
 				04D190A822C6F49400F212D2 /* SHBaseTableViewHeaderFooterView.swift */,
 				DFB0C426264664EA00D2B142 /* YJCustomNavView.h */,
 				DFB0C425264664EA00D2B142 /* YJCustomNavView.m */,
+				DF953889265B8DC80038AA3A /* SHView.swift */,
 			);
 			path = SHView;
 			sourceTree = "<group>";
@@ -418,6 +487,8 @@
 		04D190B022CE471E00F212D2 /* SHHome */ = {
 			isa = PBXGroup;
 			children = (
+				DF9538CC265B99670038AA3A /* Model */,
+				DF9538B9265B96300038AA3A /* ViewModel */,
 				04D190B322CE473F00F212D2 /* Controller */,
 				04D190B122CE472C00F212D2 /* View */,
 				DFB0C3FB26453D0700D2B142 /* addressmodel.h */,
@@ -429,6 +500,9 @@
 		04D190B122CE472C00F212D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DF9538D8265C8B3B0038AA3A /* HJHomeTableHeaderView.swift */,
+				DFE8282226578815001ECEFD /* WaterfallLayoutDelegate.swift */,
+				DFE8281D2657880A001ECEFD /* SectionData.swift */,
 				04D190B422CE47C500F212D2 /* SHComicCHead.swift */,
 				04D190B622D06F7300F212D2 /* SHURankTCell.swift */,
 				04D190B822D0E3E200F212D2 /* SHComicCFoot.swift */,
@@ -437,6 +511,14 @@
 				04D190BE22D0EC7C00F212D2 /* SHMineTabCell.swift */,
 				04D190C022D0ECCF00F212D2 /* SHDingdanCell.swift */,
 				04D190C222D0ED5F00F212D2 /* SHAlertView.swift */,
+				DFE8280326575CA3001ECEFD /* TagViewCell.swift */,
+				DFE82818265786DB001ECEFD /* WaterfallLayout.swift */,
+				DFE8282726578A34001ECEFD /* WaterCell.swift */,
+				DF9538B4265B92CF0038AA3A /* SHRxHomeView.swift */,
+				DF9538DD265C8C6F0038AA3A /* HJCollectionViewCell.swift */,
+				DF9538E2265C8CA80038AA3A /* HJHomeCollectionCell.swift */,
+				DF9538EC265C94240038AA3A /* HJTableViewCell.swift */,
+				DF9538F1265C94610038AA3A /* HJHomeTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -454,6 +536,10 @@
 				043C6AFC22D62D690094B46E /* SHdingDetailController.swift */,
 				DF4DDD862537E65D0050AF67 /* SHSelectViewController.swift */,
 				DFCFB1A2264BEF1F00FF9AA3 /* WkwebViewController.swift */,
+				DFE827F126575700001ECEFD /* ShiYingViewController.swift */,
+				DFE82813265782E5001ECEFD /* WaterFlowController.swift */,
+				DF9538AF265B92940038AA3A /* RxViewController.swift */,
+				DF9538E7265C932A0038AA3A /* HJHomeTableSectionView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -465,6 +551,31 @@
 				A0F52DDCAB68FCF4EC00C3F6 /* Pods-dingdingxiuSHB.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DF9538A9265B909C0038AA3A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DF9538AA265B90DE0038AA3A /* HJViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DF9538B9265B96300038AA3A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DF9538BA265B970B0038AA3A /* HJHomeViewModel.swift */,
+				DF9538C2265B97BD0038AA3A /* HJTableViewHeaderViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DF9538CC265B99670038AA3A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DF9538CD265B99860038AA3A /* HJTableCollectionCellViewModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -642,7 +753,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFE827F226575700001ECEFD /* ShiYingViewController.swift in Sources */,
 				04D190A922C6F49400F212D2 /* SHBaseTableViewHeaderFooterView.swift in Sources */,
+				DFE8281E2657880A001ECEFD /* SectionData.swift in Sources */,
+				DFE827FE26575A81001ECEFD /* PJFontConstant.swift in Sources */,
 				04D1908222C3C4FF00F212D2 /* EWDatePickerViewController.swift in Sources */,
 				04D190AB22C6F53C00F212D2 /* SHBaseController.swift in Sources */,
 				04D1909422C3C4FF00F212D2 /* ParallaxHeader.swift in Sources */,
@@ -651,48 +765,74 @@
 				04D190A522C6F04500F212D2 /* SHModel.swift in Sources */,
 				DF4DDD2925368FCB0050AF67 /* NetworkTools.swift in Sources */,
 				04D1909522C3C4FF00F212D2 /* UNoticeBar.swift in Sources */,
+				DF9538C3265B97BD0038AA3A /* HJTableViewHeaderViewModel.swift in Sources */,
+				DFE8280426575CA3001ECEFD /* TagViewCell.swift in Sources */,
+				DF95388A265B8DC80038AA3A /* SHView.swift in Sources */,
+				DFE827FD26575A81001ECEFD /* PJSizeConstant.swift in Sources */,
+				DFE827FF26575A81001ECEFD /* PJServerConstant.swift in Sources */,
+				DFE8280C26576373001ECEFD /* DispatchTime+Extension.swift in Sources */,
+				DF9538F2265C94610038AA3A /* HJHomeTableViewCell.swift in Sources */,
 				04D1908522C3C4FF00F212D2 /* UIColorExtension.swift in Sources */,
+				DFE8280D26576373001ECEFD /* String+Extension.swift in Sources */,
 				04D190D122D378D200F212D2 /* SHListController.swift in Sources */,
 				04D190BF22D0EC7C00F212D2 /* SHMineTabCell.swift in Sources */,
 				04D190C122D0ECCF00F212D2 /* SHDingdanCell.swift in Sources */,
+				DFE827FB26575A81001ECEFD /* PJCommonConstant.swift in Sources */,
 				043C6AFD22D62D690094B46E /* SHdingDetailController.swift in Sources */,
 				04D1908D22C3C4FF00F212D2 /* UCollectionViewAlignedLayout.swift in Sources */,
+				DFE8280F26576373001ECEFD /* Date+Extension.swift in Sources */,
+				DF9538D9265C8B3B0038AA3A /* HJHomeTableHeaderView.swift in Sources */,
+				DFE82819265786DB001ECEFD /* WaterfallLayout.swift in Sources */,
 				04D190C322D0ED5F00F212D2 /* SHAlertView.swift in Sources */,
 				04D1909022C3C4FF00F212D2 /* UEmptyDataSet.swift in Sources */,
 				04D1908722C3C4FF00F212D2 /* UIBarButtonItemExtension.swift in Sources */,
 				04D190C722D0FB8D00F212D2 /* SHomeViewController.swift in Sources */,
 				04D1909322C3C4FF00F212D2 /* UIScrollView+ParallaxHeader.swift in Sources */,
 				04D190CD22D1069A00F212D2 /* SHDingDanController.swift in Sources */,
+				DFE827FC26575A81001ECEFD /* PJColorConstant.swift in Sources */,
 				04D190BD22D0E43300F212D2 /* SHomeViewCell.swift in Sources */,
 				04D1909722C3C5D900F212D2 /* SHUapi.swift in Sources */,
 				04D1909222C3C4FF00F212D2 /* ParallaxHeaderMode.swift in Sources */,
 				04D1908422C3C4FF00F212D2 /* ArrayExtensions.swift in Sources */,
+				DF9538AB265B90DE0038AA3A /* HJViewModel.swift in Sources */,
 				04D1908E22C3C4FF00F212D2 /* UCollectionViewSectionBackgroundLayout.swift in Sources */,
 				04D1908C22C3C4FF00F212D2 /* DictionaryExtension.swift in Sources */,
 				043C6AFB22D4D55B0094B46E /* SHMineDingController.swift in Sources */,
 				04D190C922D0FEEE00F212D2 /* SHModelViewController.swift in Sources */,
 				04D1908A22C3C4FF00F212D2 /* DispatchQueueExtension.swift in Sources */,
+				DF9538DE265C8C6F0038AA3A /* HJCollectionViewCell.swift in Sources */,
 				04D1908322C3C4FF00F212D2 /* CommonHelper.swift in Sources */,
 				04D190CB22D105EF00F212D2 /* SHMineViewController.swift in Sources */,
+				DF9538CE265B99860038AA3A /* HJTableCollectionCellViewModel.swift in Sources */,
+				DF9538ED265C94240038AA3A /* HJTableViewCell.swift in Sources */,
 				04D1908822C3C4FF00F212D2 /* UIDeviceExtension.swift in Sources */,
+				DF9538BB265B970B0038AA3A /* HJHomeViewModel.swift in Sources */,
 				04D1909A22C3C6CC00F212D2 /* JXPopupView.swift in Sources */,
 				DF4DDD2E25369F000050AF67 /* BaseModel.swift in Sources */,
 				DFCFB1A3264BEF1F00FF9AA3 /* WkwebViewController.swift in Sources */,
+				DF9538B0265B92940038AA3A /* RxViewController.swift in Sources */,
 				04D1909B22C3C6CC00F212D2 /* Global.swift in Sources */,
 				DFB0C427264664EA00D2B142 /* YJCustomNavView.m in Sources */,
 				DFB0C3FD26453D0700D2B142 /* addressmodel.m in Sources */,
+				DF9538E3265C8CA80038AA3A /* HJHomeCollectionCell.swift in Sources */,
 				04D190B522CE47C500F212D2 /* SHComicCHead.swift in Sources */,
 				04D1908122C3C4FF00F212D2 /* EWDataPickerPresentAnimated.swift in Sources */,
 				04D1903122C3BDAD00F212D2 /* ViewController.swift in Sources */,
+				DFE8280E26576373001ECEFD /* Color+Extension.swift in Sources */,
 				DF4DDD872537E65D0050AF67 /* SHSelectViewController.swift in Sources */,
 				04D190CF22D2141500F212D2 /* SHTabBarController.swift in Sources */,
 				04D1909122C3C4FF00F212D2 /* UHairPowder.swift in Sources */,
 				04D1908622C3C4FF00F212D2 /* UIViewExtension.swift in Sources */,
 				04D190B922D0E3E200F212D2 /* SHComicCFoot.swift in Sources */,
+				DF9538B5265B92CF0038AA3A /* SHRxHomeView.swift in Sources */,
+				DFE8282826578A34001ECEFD /* WaterCell.swift in Sources */,
 				04C746AA22D963D1006A26F3 /* SHLoginViewController.swift in Sources */,
+				DFE8282326578815001ECEFD /* WaterfallLayoutDelegate.swift in Sources */,
 				04D190C522D0F57D00F212D2 /* SHSubscibeListViewController.swift in Sources */,
 				04D1908B22C3C4FF00F212D2 /* StringExtension.swift in Sources */,
 				04D190B722D06F7300F212D2 /* SHURankTCell.swift in Sources */,
+				DF9538E8265C932A0038AA3A /* HJHomeTableSectionView.swift in Sources */,
+				DFE82814265782E6001ECEFD /* WaterFlowController.swift in Sources */,
 				04D1902F22C3BDAD00F212D2 /* AppDelegate.swift in Sources */,
 				04D190BB22D0E41A00F212D2 /* SHComicCCell.swift in Sources */,
 				DFB0C421264627AF00D2B142 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,

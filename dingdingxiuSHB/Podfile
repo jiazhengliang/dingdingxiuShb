@@ -13,9 +13,14 @@ pod 'HMSegmentedControl'
 pod 'IQKeyboardManagerSwift'
 pod 'EmptyDataSet-Swift'
 pod "UINavigation-SXFixSpace"
-#import "SVProgressHUD.h"
+pod "RxSwift"
 pod 'SVProgressHUD'
 pod 'SwiftyJSON'
 pod 'XHToastSwift'
 pod 'YYKit'
+pod 'SnapKit'
+pod 'RxSwift'
+pod 'RxCocoa'
+pod 'MJRefresh'
+pod 'Kingfisher'
 end

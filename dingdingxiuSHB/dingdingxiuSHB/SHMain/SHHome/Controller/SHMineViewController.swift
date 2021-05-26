@@ -51,6 +51,13 @@ class SHMineViewController: SHBaseController {
         
     }
     
+    override func rightBtnClick(_: UIButton) {
+        
+        let vc  = RxViewController()
+        vc.hidesBottomBarWhenPushed = true;
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     override func configUI() {
         view.addSubview(tableView)
         
@@ -111,11 +118,18 @@ extension SHMineViewController : UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let modelVC = SHModelViewController()
+        var modelVC = SHModelViewController()
         modelVC.indexPath = indexPath.row;
         
         if indexPath.row == 2 {
             view.showXHToastCenterWithText("不能修改手机号")
+            return
+        }
+        
+        if indexPath.row == 3 {
+            var  smodelVC = SHSelectViewController()
+            smodelVC.hidesBottomBarWhenPushed = true;
+            navigationController?.pushViewController(smodelVC, animated: true)
             return
         }
         modelVC.hidesBottomBarWhenPushed = true;

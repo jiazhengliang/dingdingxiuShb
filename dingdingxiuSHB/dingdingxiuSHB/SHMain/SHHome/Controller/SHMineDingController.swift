@@ -53,14 +53,35 @@ class SHMineDingController: SHBaseController {
             $0.top.equalTo(navigationHeight)
             $0.right.left.bottom.equalTo(0)
         }
-        
 
-        
-        
         view.addSubview(barView)
         barView.setTitle("任务")
+        
+        barView .setRightButton(self.rightBtn)
+        self.rightBtn.setTitle("标签", for: .normal)
+        
+        
+        barView .setLeftButton(self.leftBtn)
+        self.leftBtn.setTitle("瀑布流", for: .normal)
     }
 
+    
+    override func LeftBtnClick(_: UIButton) {
+        let vc = WaterFlowController()
+ 
+        
+        vc.hidesBottomBarWhenPushed = true;
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc  override func rightBtnClick(_: UIButton) {
+        let vc = ShiYingViewController()
+ 
+        
+        vc.hidesBottomBarWhenPushed = true;
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
     
    @objc func attentionBtnClick(sender: UIButton) {
     sender.isSelected = true
